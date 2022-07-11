@@ -1,2 +1,2 @@
 here is the link to my website:
-[https://arpithkphy.github.io/](arpithkphy.github.io){:target="_blank"}
+<a href="https://arpithkphy.github.io/" target="_blank" rel="noopener"><span>arpithkphy.github.io</span> </a>
