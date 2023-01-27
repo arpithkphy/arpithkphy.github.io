@@ -135,7 +135,8 @@ nav li {
   font-family: var(--ff-secondary);
   margin-left: 1em;
   padding-top: 2em;
- 
+  
+
   position: relative;
 }
 
@@ -146,7 +147,8 @@ nav a {
 
 nav a:hover {
   /*outline-width: 0;*/
-  color: var(--clr-light);
+  /*color: var(--clr-light);*/
+  color: black;
 }
 
 nav a::before {
@@ -202,12 +204,14 @@ nav a:hover::before {
   }
 
   .intro {
+    float: center;
     display: grid;
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
     grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
+/*    padding: 0em 2em 0em 2em;*/
   }
 
   .intro__img {
@@ -216,6 +220,14 @@ nav a:hover::before {
     min-width: 250px;
     position: relative;
     z-index: 2;
+  }
+
+  .intro__text {
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0em 1em 0em 1em;
+    text-align: center;
   }
 
   .section__subtitle--intro {
