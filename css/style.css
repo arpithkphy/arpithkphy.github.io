@@ -103,9 +103,69 @@ h3 {font-size: var(--fs-h3);}
 
 /* header */
 
-nav {
-  display: none;
+
+
+header {
+  background: var(--clr-accent);
 }
+
+/* float nav and logo go out of the header backgd */
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+nav {
+  /*display: none;*/
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.1em 1.0em;
+  font-family: var(--ff-secondary);
+  margin-left: 1em;
+  padding-top: 2em;
+ 
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  /*outline-width: 0;*/
+  color: var(--clr-light);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  background-color: #444;
+  height: 5px;
+
+  position: absolute;
+  top: 0;
+  width: 00%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
 
 /* intro section */
 
@@ -126,6 +186,21 @@ nav {
 }
 
 @media (min-width:  600px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    float: left;
+    grid-area: img;
+    padding: 1em 0em;
+    grid-area: img;
+    min-width: 25px;
+    position: relative;
+    z-index: 2;
+  }
+
   .intro {
     display: grid;
     width: min-content;
@@ -136,6 +211,7 @@ nav {
   }
 
   .intro__img {
+    float: left;
     grid-area: img;
     min-width: 250px;
     position: relative;
@@ -165,7 +241,7 @@ nav {
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
   margin-bottom: 40px;
   margin-left: 25px;
-  text-align: left;
+  text-align: center;
   font-size: 120%;
   font-weight: 150;
 }
@@ -200,7 +276,7 @@ h3{
   border: 1px solid black;
   width: 150px;
   height: 40px;
-  text-align: center;
+  text-align: left;
   font-size: 125%;
   position: relative;
   float:  right;
