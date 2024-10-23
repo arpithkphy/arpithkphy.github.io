@@ -41,6 +41,8 @@ Navy: #000080
 
 */
 
+
+/*
 :root {
   --ff-primary: 'Cormorant SC', serif;
   --ff-secondary: 'Source Sans Pro', sans-serif;
@@ -61,6 +63,30 @@ Navy: #000080
       0.125em 0.125em 0.25em rgba(0,0,0,0.15);  
 
 }
+*/
+
+:root {
+  --ff-primary: 'Cormorant SC', serif;
+  --ff-secondary: 'Source Sans Pro', sans-serif;
+
+  --fw-reg:  300;
+  --fw-bold: 700;
+
+  --clr-light: #f0f8ff; /* Alice Blue */
+  --clr-dark: #001f3f;  /* Navy Blue */
+  --clr-accent: #0074D9; /* Azure Blue */
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.15),
+      0.125em 0.125em 0.25em rgba(0,0,0,0.1);  
+
+}
+
+
 
 @media (min-width:  800px) {
   :root {
