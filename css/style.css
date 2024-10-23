@@ -6,6 +6,41 @@
 
 /* custom properties  */
 
+/* colors
+
+Black: #000000
+White: #FFFFFF
+Gray: #808080
+Light Gray: #D3D3D3
+Dark Gray: #A9A9A9
+
+Red: #FF0000
+Dark Red: #8B0000
+Light Red: #FFA07A
+
+Blue: #0000FF
+Dark Blue: #00008B
+Light Blue: #ADD8E6
+
+Green: #008000
+Dark Green: #006400
+Light Green: #90EE90
+
+Yellow: #FFFF00
+Orange: #FFA500
+Pink: #FFC0CB
+Purple: #800080
+Violet: #EE82EE
+
+Gold: #FFD700
+Brown: #A52A2A
+Beige: #F5F5DC
+Teal: #008080
+Turquoise: #40E0D0
+Navy: #000080
+
+*/
+
 :root {
   --ff-primary: 'Cormorant SC', serif;
   --ff-secondary: 'Source Sans Pro', sans-serif;
@@ -15,7 +50,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #000080;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
