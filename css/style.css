@@ -48,15 +48,25 @@ h2 {
 
 /* ---------- Layout ---------- */
 .header {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+
+/* ---------- Left column (photo) ---------- */
+.photo-col {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-pic {
-  width: 220px;
+  width: 180px;
+  max-width: 100%;
   border: 1px solid #ccc;
 }
+
 
 /* ---------- Info box ---------- */
 .info-box {
@@ -82,3 +92,13 @@ ul, ol {
 li {
   margin-bottom: 10px;
 }
+
+/* ---------- Text width control ---------- */
+.content {
+  max-width: 720px;
+}
+
+.content p {
+  margin-bottom: 12px;
+}
+
