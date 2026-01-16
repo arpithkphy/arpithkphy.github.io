@@ -14,14 +14,20 @@ nav {
   background: #222;
   padding: 12px 20px;
   margin-bottom: 40px;
+
+  display: flex;
+  justify-content: flex-end;
 }
+
 
 nav a {
   color: #ddd;
-  margin-right: 18px;
+  margin-left: 18px;
+  margin-right: 0;
   text-decoration: none;
   font-size: 14px;
 }
+
 
 nav a:hover {
   color: #fff;
@@ -47,25 +53,30 @@ h2 {
 }
 
 /* ---------- Layout ---------- */
+/* ---------- Header layout ---------- */
 .header {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 300px 1fr;
   column-gap: 40px;
-  align-items: center;
+  align-items: stretch;   /* important */
 }
 
-/* ---------- Left column (photo) ---------- */
+/* ---------- Left column (photo container) ---------- */
 .photo-col {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #eee;
+  padding: 20px;
 }
 
+/* Photo itself */
 .profile-pic {
   width: 180px;
-  max-width: 100%;
+  height: auto;
   border: 1px solid #ccc;
 }
+
 
 
 /* ---------- Info box ---------- */
@@ -112,4 +123,14 @@ img {
   width: 180px !important;
   height: auto !important;
 }
+
+/* ---------- Section containers ---------- */
+.section-wide {
+  max-width: 100%;
+}
+
+.section-narrow {
+  max-width: 760px;
+}
+
 
