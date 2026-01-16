@@ -102,3 +102,14 @@ li {
   margin-bottom: 12px;
 }
 
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-pic {
+  width: 180px !important;
+  height: auto !important;
+}
+
