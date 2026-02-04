@@ -185,3 +185,119 @@ img {
 
 
 
+/* for QCD in Strong Magnetic Fields */
+.two-column {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.text-column {
+  flex: 2;
+}
+
+.figure-column {
+  flex: 1;
+}
+
+.figure-column img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-bottom: 20px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+
+
+
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+.carousel-caption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #555;
+}
+
+.dot {
+  cursor: pointer;
+}
+
+
+/* pub summary */
+.pub-summary p {
+  margin: 4px 0;
+}
+
+.pub-summary ul {
+  margin: 4px 0 6px 18px;
+  padding-left: 0;
+}
+
+.pub-summary li {
+  margin: 2px 0;
+}
+
+.pub-summary .indent {
+  margin-left: 18px;
+  margin-top: 2px;
+}
+
+
+.id-links a {
+  text-decoration: none;
+}
+
+.id-links a:hover {
+  text-decoration: underline;
+}
+

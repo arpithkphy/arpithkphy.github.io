@@ -2,9 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Talks – Arpith Kumar</title>
+  <title>Projects – Arpith Kumar</title>
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 </head>
+
+
 
 <body>
 
@@ -15,6 +26,130 @@
   <a href="talks.html">Talks</a>
   <a href="projects.html">Projects</a>
 </nav>
+
+
+<h2>QCD in strong magnetic fields: conserved charges and EoS</h2>
+
+<div class="two-column">
+
+  <div class="text-column">
+    <p>
+    Strong magnetic fields can profoundly affect the equilibrium properties of strongly
+    interacting matter, characterized by the equation of state and bulk thermodynamics.
+    Although such fields are expected in off-central heavy-ion collisions, directly measuring
+    their experimental imprints remains extremely challenging. To address this, we propose
+    the baryon–electric charge correlations
+    $\chi_{11}^{BQ}$ and the chemical potential ratio
+    $\mu_Q/\mu_B$ as magnetic-field-sensitive probes,
+    based on $(2+1)$-flavor lattice QCD simulations at physical pion masses.
+    Along the transition line, $\chi_{11}^{BQ}$ and
+    $(\mu_Q/\mu_B)_{\mathrm{LO}}$ in Pb–Pb collisions
+    increase by factors of $2.1$ and $2.4$ at
+    $eB \simeq 8M_\pi^2$, respectively.
+    </p>
+
+
+    <p>
+      We further extend this investigation to the QCD equation of state,
+      examining leading-order thermodynamic coefficients for strangeness-neutral
+      scenarios up to $eB \simeq 0.8$ GeV$^2$.
+    </p>
+
+    <p>Relevant publications:
+      <a href="https://inspirehep.net/literature/2958969" target="_blank">PRD 112 (2025) 094508</a>,
+      <a href="https://inspirehep.net/literature/2903293" target="_blank">PRD 111 (2025) 114522</a>,
+      <a href="https://inspirehep.net/literature/2737007" target="_blank">PRL 132 (2024) 201903</a>
+    </p>
+
+    <p>Keywords:
+      Lattice QCD, Heavy-ion collisions, QCD magnetometer, QCD equation of state
+    </p>
+  </div>
+
+  <div class="figure-column">
+
+    <div class="carousel">
+      <img src="qcd/chi_11_BQ_spline_nt8.png"
+           class="carousel-image active">
+      <img src="qcd/qcdB_p2_data_nt12.png"
+           class="carousel-image">
+      <img src="qcd/ratio_11BQ_11QS_Tpc_eB_ptetacut_com.png"
+           class="carousel-image">
+      <img src="qcd/q1_Pb_Au_cont.png"
+           class="carousel-image">
+      <img src="qcd/q1_Pb_Au_cont_vsT.png"
+           class="carousel-image">
+      <img src="qcd/s1_Pb_Au_cont_vsT.png"
+           class="carousel-image">
+      <img src="qcd/p2_Pb_Au_cont_vsT.png"
+           class="carousel-image">
+      <img src="qcd/q1_T155_cont_cont_vsr.png"
+           class="carousel-image">
+    </div>
+
+    <div class="carousel-dots">
+    </div>
+
+    <div class="carousel-caption">
+      Selected lattice QCD results in strong magnetic fields.
+    </div>
+
+  </div>
+
+
+  </div>
+
+
+</div>
+
+
+<h2>Complex Langevin Dynamics and Stochastic Quantization</h2>
+
+<h2>Diffusion Models</h2>
+
+
+<script>
+  const images = document.querySelectorAll('.carousel-image');
+  const dotsContainer = document.querySelector('.carousel-dots');
+  let current = 0;
+  let interval = null;
+
+  // Create dots dynamically
+  images.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+      clearInterval(interval);
+      showSlide(index);
+      startCarousel();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    images[current].classList.remove('active');
+    dots[current].classList.remove('active');
+
+    current = index;
+
+    images[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function startCarousel() {
+    interval = setInterval(() => {
+      showSlide((current + 1) % images.length);
+    }, 4000);
+  }
+
+  startCarousel();
+</script>
+
 
 
 </body>
