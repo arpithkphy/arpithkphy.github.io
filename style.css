@@ -97,13 +97,21 @@ h2 {
 }
 
 /* ---------- Left column (photo container) ---------- */
-.photo-col {
+/*.photo-col {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #eee;
   padding: 15px;
+}*/
+
+.photo-col {
+  display: flex;
+  align-items: stretch;
+  background: #eee;
+  padding: 15px;
 }
+
 
 /* Photo itself */
 .profile-pic {
@@ -161,10 +169,14 @@ img {
   height: auto;
 }
 
+
+
 .profile-pic {
-  width: 180px !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
 
 /* ---------- Section containers ---------- */
 .section-wide {
