@@ -1,6 +1,8 @@
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #ffffff;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("img/background.avif") center top repeat-y;
+  background-size: 100% auto;
   color: #111;
   max-width: 1000px;
   margin: 0 auto;
@@ -108,14 +110,14 @@ h2 {
 .photo-col {
   display: flex;
   align-items: stretch;
-  background: #eee;
+  background: transparent;
   padding: 5px;
 }
 
 
 /* Photo itself */
 .profile-pic {
-  width: 300px;
+  width: 100%;
   height: auto;
   border: 0px solid #ccc;
 }
@@ -124,7 +126,7 @@ h2 {
 
 /* ---------- Info box ---------- */
 .info-box {
-  background: #eee;
+  background: transparent;
   padding: 20px 25px;
   font-size: 15px;
 }
